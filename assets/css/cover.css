@@ -153,6 +153,22 @@ body {
 .content {
   padding-top: 90px;
 }
+  
+/* https://benmarshall.me/responsive-iframes/ */
+.doc-view-container {
+	overflow: hidden;
+  /* Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)*/
+  padding-top: 129.41%;
+  position: relative;
+}
+.doc-view-container>.doc-view {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
 
 /*
  * Footer
@@ -169,19 +185,19 @@ body {
  */
 
 @media (max-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
+  /*[> Pull out the header and footer <]*/
+  /*.masthead {*/
+  /*  position: fixed;*/
+  /*  top: 0;*/
+  /*}*/
+  /*.mastfoot {*/
+  /*  position: fixed;*/
+  /*  bottom: 0;*/
+  /*}*/
+  /*[> Start the vertical centering <]*/
+  /*.site-wrapper-inner {*/
+  /*  vertical-align: middle;*/
+  /*}*/
   /* Handle the widths */
   .masthead,
   .mastfoot,
