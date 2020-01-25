@@ -49,6 +49,8 @@ body {
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cover-container {
   margin-right: auto;
@@ -64,9 +66,21 @@ body {
 /*
  * Header
  */
+
+.masthead,
+.mastfoot,
+.cover-container {
+  width: 768px;
+}
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  float: left;
+}
+
+.masthead-nav {
+  float: right;
 }
 
 .masthead-nav > li {
@@ -96,16 +110,6 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
-
-
 /*
  * Cover
  */
@@ -119,8 +123,13 @@ body {
 }
 
 .pic {
+  float: left;
   padding-right: 20px;
 }
+.pic img {
+  width: 320px;
+}
+
 .opening{
   font-weight:400 !important;
   text-align: justify !important;
@@ -159,7 +168,7 @@ body {
  * Affix and center
  */
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -179,12 +188,21 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
+  .pic {
+    width: 100%;
+    float: unset;
+    padding-bottom: 20px;
+    padding-right: unset;
+  }
+
+  .pic img {
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
-}
