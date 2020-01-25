@@ -1,0 +1,10 @@
+S3 Static Site with Cloudflare
+------------------------------
+
+Based on this guide: https://wsvincent.com/static-site-hosting-with-s3-and-cloudflare/
+
+1. Configure buckets. Use full domain name (www.ajford.us and ajford.us), and
+   set as static site
+2. Have www.ajford.us bucket redir to ajford.us
+3. Configure Cloudflare
+
